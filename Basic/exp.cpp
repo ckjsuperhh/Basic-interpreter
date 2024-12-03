@@ -78,7 +78,7 @@ std::string IdentifierExp::getName() {
  * Implementation notes: the CompoundExp subclass
  * ----------------------------------------------
  * The CompoundExp subclass declares instance variables for the operator
- * and the left and right subexpressions.  The implementation of eval 
+ * and the left and right subexpressions.  The implementation of eval
  * evaluates the subexpressions recursively and then applies the operator.
  */
 

@@ -13,17 +13,17 @@
 /* Implementation of the Statement class */
 
 int stringToInt(std::string str) {
-    int start =0;
-    int symbol=1;
+    int start = 0;
+    int symbol = 1;
     int finish = str.length();
-    if(str[0]=='+'||str[0]=='-') {
-        start=1;
+    if (str[0] == '+' || str[0] == '-') {
+        start = 1;
         finish--;
-        symbol=(str[0]=='-')?-1:1;
+        symbol = (str[0] == '-') ? -1 : 1;
     }
-    int result=0;
-    for(int i=start;i<=finish;i++) {
-        result=result*10+str[i];
+    int result = 0;
+    for (int i = start; i <= finish; i++) {
+        result = result * 10 + str[i];
     }
     return result* symbol;
 };

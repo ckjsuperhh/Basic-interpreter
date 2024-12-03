@@ -25,33 +25,33 @@ void Program::clear() {
 
 void Program::addSourceLine(int lineNumber, const std::string &line) {
     // Replace this stub with your own code
-    if(accordance.find(lineNumber)!=accordance.end()) {
-        accordance[lineNumber]=line;
-    }else {
-        accordance.emplace(lineNumber,line);
+    if (accordance.find(lineNumber) != accordance.end()) {
+        accordance[lineNumber] = line;
+    } else {
+        accordance.emplace(lineNumber, line);
     }
 }
 
 void Program::removeSourceLine(int lineNumber) {
     // Replace this stub with your own code
-    if(accordance.find(lineNumber)!=accordance.end()) {
+    if (accordance.find(lineNumber) != accordance.end()) {
         accordance.erase(lineNumber);
     }
 }
 bool Program::Is_empty_line(int lineNumber) {
-    bool ok=false;
-    for(int i=0;i<accordance[lineNumber].size();i++) {
-        if((accordance[lineNumber][i]>='0'&&accordance[lineNumber][i]<='9')||accordance[lineNumber][i]==' ') {
+    bool ok = false;
+    for (int i = 0; i < accordance[lineNumber].size(); i++) {
+        if ((accordance[lineNumber][i] >= '0' && accordance[lineNumber][i] <= '9') || accordance[lineNumber][i] == ' ') {
             continue;
         }
-        ok=true;
+        ok = true;
         break;
     }
     return ok;
 }
 std::string Program::getSourceLine(int lineNumber) {
     // Replace this stub with your own code
-    if(accordance.find(lineNumber)!=accordance.end()) {
+    if (accordance.find(lineNumber) != accordance.end()) {
         return accordance[lineNumber];
     }
     return "";
@@ -64,14 +64,14 @@ void Program::setParsedStatement(int lineNumber, Statement *stmt) {
 
 
 Statement *Program::getParsedStatement(int lineNumber) {
-   // Replace this stub with your own code
+    // Replace this stub with your own code
 
 
 }
 
 int Program::getFirstLineNumber() {
     // Replace this stub with your own code
-    if(accordance.empty()) {
+    if (accordance.empty()) {
         return -1;
     }
     return accordance.begin()->first;
@@ -79,7 +79,7 @@ int Program::getFirstLineNumber() {
 
 int Program::getNextLineNumber(int lineNumber) {
     // Replace this stub with your own code
-    if(accordance.upper_bound(lineNumber)!=accordance.end()) {
+    if (accordance.upper_bound(lineNumber) != accordance.end()) {
         return accordance.upper_bound(lineNumber)->first;
     }
     return -1;
