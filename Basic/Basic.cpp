@@ -61,7 +61,6 @@ bool ValidVariableName(const std::string &str) {
  */
 
 void processLine(std::string line, Program &program, EvalState &state) {
-    //std::cerr<<"line="<<line<<std::endl;
     TokenScanner scanner;
     bool ok = 0;
     scanner.ignoreWhitespace();
@@ -72,7 +71,6 @@ void processLine(std::string line, Program &program, EvalState &state) {
         program.addSourceLine(stoi(next), line);
         ok = 1;
     }
-    //std::cerr<<"ok="<<ok<<std::endl;
     if (!ok) {
         scanner.saveToken(next);
         next = scanner.nextToken();
