@@ -18,9 +18,6 @@ Program::~Program() = default;
 
 void Program::clear() {
     accordance.clear();
-    // Replace this stub with your own code
-    //todo
-
 }
 
 void Program::addSourceLine(int lineNumber, const std::string &line) {
@@ -59,14 +56,11 @@ std::string Program::getSourceLine(int lineNumber) {
 
 void Program::setParsedStatement(int lineNumber, Statement *stmt) {
     // Replace this stub with your own code
-
 }
 
 
 Statement *Program::getParsedStatement(int lineNumber) {
     // Replace this stub with your own code
-
-
 }
 
 int Program::getFirstLineNumber() {
